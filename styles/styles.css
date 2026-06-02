@@ -548,16 +548,16 @@ a {
 }
 
 .catalog-results {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 292px 160px;
+  gap: 40px 70px;
   align-items: center;
   padding: 50px 70px 60px;
   text-align: left;
 }
 
 .catalog-results__title {
-  width: 338px;
-  margin-right: auto;
+  margin: 0;
 }
 
 .catalog-results__select {
@@ -577,7 +577,6 @@ a {
   flex-wrap: wrap;
   justify-content: flex-end;
   width: 160px;
-  margin-left: 66px;
 }
 
 .catalog-results__view-link {
@@ -594,16 +593,17 @@ a {
 }
 
 .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
   width: 100%;
   margin-top: 40px;
 }
 
 .hotel-card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 140px 140px;
   gap: 16px 20px;
   box-sizing: border-box;
   width: 340px;
@@ -619,7 +619,7 @@ a {
 
 .hotel-card__image-link,
 .hotel-card__title {
-  width: 100%;
+  grid-column: 1 / -1;
 }
 
 .hotel-card__title {
@@ -683,6 +683,7 @@ a {
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  grid-column: 1 / -1;
   width: 100%;
   margin-top: 40px;
 }
